@@ -1,0 +1,9 @@
+.container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+}
+.text{
+    text-align: left;
+    font-weight: 500;
+}

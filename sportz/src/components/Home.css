@@ -1,11 +1,90 @@
-.container{
+*{
+    margin: 0;
+    padding: 0%;
+}
+.main_box{
+    width: 100%;
+    background-color: rgb(73, 37, 3);
+}
+.search_box{
+    background-color: rgb(194, 158, 124); 
+    height: 80px;
+    width: 100%;
+    justify-content: center; 
+}
+.search{
+    width: 50%;
+    height: 40%;
+    margin: 20px auto;
+}
+.btn{
+    width: 10%;
+    height: 44%;
+    margin: 20px auto;
+}
+.container{ 
     width: 95%;
-    margin: auto;
+    margin: 20px auto  ;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    gap: 10px;
+    grid-template-columns: 24% 24% 24% 24% ;
+    gap:20px; 
+}
+.player{
+    background-color: rgb(194, 158, 124); 
 }
 .text{
+    height: 40%;
     text-align: left;
     font-weight: 500;
+}
+
+@media (max-width: 980px){
+    .container{ 
+        width: 95%;
+        margin: 20px auto  ;
+        display: grid;
+        grid-template-columns: 33% 33% 33% ;
+        gap:20px; 
+    }
+}
+
+@media (max-width: 680px){
+    .container{ 
+        width: 95%;
+        margin: 20px auto  ;
+        display: grid;
+        grid-template-columns: 49% 49% ;
+        gap:20px; 
+    }
+    .search{
+        width: 50%;
+        height: 40%;
+        margin: 20px auto;
+    }
+    .btn{
+        width: 20%;
+        height: 44%;
+        margin: 20px auto;
+    }
+}
+
+
+@media (max-width: 380px){
+    .container{ 
+        width: 95%;
+        margin: 20px auto  ;
+        display: grid;
+        grid-template-columns:98% ;
+        gap:20px; 
+    }
+    .search{
+        width: 50%;
+        height: 40%;
+        margin: 20px auto;
+    }
+    .btn{
+        width: 20%;
+        height: 44%;
+        margin: 20px auto;
+    }
 }

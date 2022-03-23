@@ -19,23 +19,31 @@ const Home = () => {
        console.log(teamdata)
   return (
      <>
+     <div className='main_box'> 
+     <div className='search_box'>
+        <input className='search' type="text" placeholder='Search your player by name' />
+        <button className='btn'>Search</button>
+     </div>
      <div className='container'>
          {playerdata.map((el)=>{
-             return <div style={{border:"1px solid"}}> 
-                 <img style={{width:"100%",height:"50%"}} src={`player-images/${el.Id}.jpg`} alt={`player-images/${el.Id}.jpg`} />
+             return <div className='player'> 
+                <div style={{width:"100%",height:"60%"}}> 
+                    <img style={{width:"100%",height:"100%"}} src={`player-images/${el.Id}.jpg`} alt={`player-images/${el.Id}.jpg`} />
+                </div>
                  <div className='text'> 
-                 <p>{"Name : "+el.PFName}</p>
-                 <p>{"Skill : "+el.SkillDesc}</p>
-                 <p>{"Value : "+el.Value+" $"}</p> 
-                 <div>{el.UpComingMatchesList.map((d)=>{
-                     return <>
-                     <p>{"Upcoming match : "+d.CCode+" vs "+ d.VsCCode}</p>
-                     <p>{"Match time : "+ d.MDate}</p>
-                     </>
-                 })}</div>
+                    <p>{"Name : "+el.PFName}</p>
+                    <p>{"Skill : "+el.SkillDesc}</p>
+                    <p>{"Value : "+el.Value+" $"}</p> 
+                    <div>{el.UpComingMatchesList.map((d)=>{
+                        return <>
+                        <p>{"Upcoming match : "+d.CCode+" vs "+ d.VsCCode}</p>
+                        <p>{"Match time : "+ d.MDate}</p>
+                        </>
+                    })}</div>
                  </div>
              </div>
          })}
+     </div>
      </div>
 
      </>

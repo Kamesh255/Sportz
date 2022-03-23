@@ -22,11 +22,17 @@ const Home = () => {
      <div className='container'>
          {playerdata.map((el)=>{
              return <div style={{border:"1px solid"}}> 
-                 <img style={{width:"100%"}} src={`player-images/${el.Id}.jpg`} alt={`player-images/${el.Id}.jpg`} />
+                 <img style={{width:"100%",height:"50%"}} src={`player-images/${el.Id}.jpg`} alt={`player-images/${el.Id}.jpg`} />
                  <div className='text'> 
                  <p>{"Name : "+el.PFName}</p>
                  <p>{"Skill : "+el.SkillDesc}</p>
                  <p>{"Value : "+el.Value+" $"}</p> 
+                 <div>{el.UpComingMatchesList.map((d)=>{
+                     return <>
+                     <p>{"Upcoming match : "+d.CCode+" vs "+ d.VsCCode}</p>
+                     <p>{"Match time : "+ d.MDate}</p>
+                     </>
+                 })}</div>
                  </div>
              </div>
          })}

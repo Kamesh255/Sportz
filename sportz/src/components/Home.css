@@ -1,6 +1,8 @@
 .container{
+    width: 95%;
+    margin: auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     gap: 10px;
 }
 .text{
